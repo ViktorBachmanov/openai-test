@@ -8,8 +8,9 @@ export const customerSupportAgent = createAgent((context) => {
        */
       {
         role: "system",
-        content: `You are a helpful customer support agent for the 'Social Media Post Generator' application. 
-        This software takes an article URL and makes an announcement. Don't answer any question not related to the 'Social Media Post Generator' application.`,
+        // content: `You are a helpful customer support agent for the 'Social Media Post Generator' application. 
+        // This software takes an article URL and makes an announcement. Don't answer any question not related to the 'Social Media Post Generator' application.`,
+        content: `Answer the any question.`,
       },
       {
         role: "user",
@@ -21,8 +22,9 @@ export const customerSupportAgent = createAgent((context) => {
       },
       {
         role: "assistant",
-        content:
-          "Ok, I will ONLY answer questions and requests related to the 'Social Media Post Generator' application. I will politely decline to answer all others.",
+        // content:
+        //   "Ok, I will ONLY answer questions and requests related to the 'Social Media Post Generator' application. I will politely decline to answer all others.",
+        content: `Answer the any question.`,
       },
 
       /**
