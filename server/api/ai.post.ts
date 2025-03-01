@@ -16,11 +16,14 @@ export default defineEventHandler(async (event) => {
   });
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
-    messages: body.messages || [],
+    model: "gpt-4o-mini",
+    store: true,
+    // messages: body.messages || [],
+    messages: {"role": "user", "content": "write a haiku about ai"},
     temperature: body.temperature || 1,
     // @ts-expect-error checking above if the agent exists
     ...agents[agent](body),
   });
+
   return completion;
 });
