@@ -13,10 +13,11 @@ export const customerSupportAgent = createAgent((context) => {
       },
       {
         role: "user",
-        content: `If I ask any question NOT related to the 
-        'Social Media Post Generator' application, DO NOT answer the question at all.
-        Instead politely decline.
-        `,
+        // content: `If I ask any question NOT related to the 
+        // 'Social Media Post Generator' application, DO NOT answer the question at all.
+        // Instead politely decline.
+        // `,
+        content: `Answer the any question.`,
       },
       {
         role: "assistant",
